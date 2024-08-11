@@ -5,6 +5,397 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #cac9c9;
+  font-family: "Noto Sans Georgian", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 60px;
+}
+
+@keyframes logo-anim {
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 15vh;
+
+  width: 100vw;
+
+  transition: 0.3s all;
+  background-color: rgb(128, 98, 211);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 20px;
+  padding-right: 40px;
+  list-style: none;
+
+  border-bottom: 4px solid rgb(163, 128, 229);
+
+  z-index: 10;
+}
+.below-nav {
+  background-color: rgb(163, 128, 229) !important;
+  height: 10vh !important;
+}
+#nav ul {
+  list-style: none;
+  gap: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-text-below::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+}
+.nav-text-below::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+}
+.nav-text:hover::before {
+  width: 100%;
+  transition: 0.3s all;
+}
+.nav-text-below:hover::after {
+  width: 100%;
+  transition: 0.3s all;
+}
+
+.nav-text {
+  padding-top: 4px;
+  padding-bottom: 8px;
+  position: relative;
+  font-family: "Noto Sans Georgian", sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bolder;
+
+  font-size: 23px;
+  transition: 0.3s all;
+}
+.nav-text:hover {
+  color: rgb(255, 174, 0);
+}
+.nav-text-below {
+  color: aliceblue;
+}
+.nav-text-below:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+
+.transparent {
+  background-color: black;
+}
+
+#title {
+  font-family: "Noto Sans Georgian", sans-serif;
+  color: white;
+
+  font-size: 24px;
+}
+
+#main {
+  margin-top: 10vh;
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+}
+
+.section-header {
+  width: 20%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.section-box {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(197, 167, 255);
+
+  border-radius: 10%;
+
+  box-shadow: 3px 3px 0px 0px rgb(111, 80, 168);
+}
+
+.section-title {
+  font-family: "Noto Sans Georgian", sans-serif !important;
+  font-weight: 600;
+
+  font-size: 24px;
+  color: rgb(163, 128, 229);
+}
+
+.section-content {
+  font-family: "Noto Sans Georgian", sans-serif !important;
+
+  width: 100%;
+
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+}
+
+.section-p {
+  font-size: 19px;
+  color: rgb(46, 0, 77);
+
+  border-radius: 10px;
+
+  background-color: rgb(235, 235, 235);
+  box-shadow: 5px 5px 0px 0px rgb(226, 226, 226);
+  padding: 10px;
+}
+
+.link {
+  color: rgb(100, 89, 248);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 19px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.prices-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+#prices-bck {
+  background-color: rgb(235, 235, 235);
+  border-radius: 3px;
+
+  padding: 20px;
+}
+
+.prices-title {
+  font-size: 24px;
+  color: rgb(106, 78, 156);
+  font-weight: bolder;
+}
+
+.prices-content-p {
+  margin-top: 5px;
+  font-size: 21px;
+  color: rgb(81, 58, 121);
+}
+
+#prices-sections {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-box {
+  position: relative;
+  display: flex;
+
+  text-align: center;
+  flex-direction: column;
+
+  padding: 30px;
+  padding-bottom: 80px;
+
+  background-color: rgb(61, 51, 88);
+
+  width: 30%;
+
+  box-shadow: 7px 7px 0 0 rgb(103, 86, 134);
+  border-radius: 2px;
+}
+
+.service-name {
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(233, 229, 223);
+}
+
+.price-title {
+  color: rgb(252, 173, 54);
+  font-size: 22px;
+}
+
+.price-box-p {
+  font-size: 18px;
+  color: rgb(199, 187, 169);
+}
+
+.box-registration-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 10px;
+
+  width: 80%;
+  height: 40px;
+
+  font-size: 18px;
+
+  border: 3px solid rgb(182, 88, 34);
+
+  color: white;
+  background-color: rgb(252, 143, 0);
+
+  cursor: pointer;
+}
+
+.input-field {
+  width: 400px;
+  height: 50px;
+
+  padding: 6px;
+  color: rgb(31, 85, 87);
+  font-size: 20px;
+}
+
+.service-selector {
+  width: 400px;
+  height: 50px;
+
+  padding: 6px;
+  color: rgb(31, 85, 87);
+  font-size: 20px;
+}
+
+.form-content {
+  position: relative;
+  width: 100%;
+
+  padding-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  color: rgb(31, 85, 87);
+  font-size: 20px;
+
+  gap: 40px;
+}
+
+.input-field-row {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-button {
+  width: 400px; /* Make width and height the same */
+  height: 50px;
+
+  font-size: 19px;
+  font-family: "Noto Sans Georgian", sans-serif !important;
+
+  border: none; /* Remove the border for a cleaner look */
+  border-radius: 25px; /* Rounded corners for a modern feel */
+  color: #fff; /* White text color */
+  background-color: #ca6e05; /* Green background color */
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.form-button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.form-button:active {
+  background-color: #388e3c; /* Even darker green when button is pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect when pressed */
+}
+
+#main {
+  margin-top: 15vh;
+}
+#prices {
+  margin-top: 100px;
+}
+#form_section {
+  margin-top: 100px;
+}
+
+#footer {
+  position: relative;
+  margin-top: 100px;
+  width: 100vw;
+  height: 200px;
+  background-color: #1e0735;
+
+  padding: 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.footer-social-item {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.footer-text {
+  color: rgb(233, 224, 255);
+  font-size: 18px;
+}
+
+.footer-social-icon {
+  width: 34px;
+  filter: grayscale(100%);
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
 }
